@@ -1,0 +1,83 @@
+type: collection.insomnia.rest/5.0
+name: DicionárioVisualApi-Insomnia
+meta:
+  id: wrk_07316282f6da4a98a66fb57aa514a8e8
+  created: 1760194897838
+  modified: 1760196325282
+  description: ""
+collection:
+  - url: http://localhost:3000/users
+    name: "Criar usuário "
+    meta:
+      id: req_0d62cd2e0c8a424f9c86e83036f54e0c
+      created: 1760194897874
+      modified: 1760195183380
+      isPrivate: false
+      description: ""
+      sortKey: -1760194897874
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Admin",
+          "email": "admin@example.com",
+          "password": "strongpassword123",
+          "role": "ADMIN"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/auth/login
+    name: Autenticar usuário
+    meta:
+      id: req_9013df07a5f74afeab8cb8d698f44cca
+      created: 1760195243026
+      modified: 1760196288597
+      isPrivate: false
+      description: ""
+      sortKey: -1760195243026
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "email": "admin@example.com",
+          "password": "strongpassword123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_29c3ee87a9756c3af208514bc893c1cfc3d76493
+    created: 1760194897855
+    modified: 1760194897855
+environments:
+  name: Base Environment
+  meta:
+    id: env_29c3ee87a9756c3af208514bc893c1cfc3d76493
+    created: 1760194897847
+    modified: 1760194897847
+    isPrivate: false
