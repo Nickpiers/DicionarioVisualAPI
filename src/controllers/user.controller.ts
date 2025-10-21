@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { createUser, getUsers } from '../services/user.service';
+import { createUser, getUsers, getUserById } from '../services/user.service';
 import { Role } from '@prisma/client';
 
 /**
@@ -42,3 +42,13 @@ export const handleGetUsers = async (req: Request, res: Response) => {
         return res.status(500).json({ message: 'Internal server error' });
     }
 }
+
+export const handleGetUserById = async (req: Request, res: Response) => {  
+    try {
+        const user =  await getUserById(req.params.id);
+        return res.status(200).json(user);
+    } catch (error) {
+        console.error('Error fetching user by ID:', error);
+        return res.status(500).json({ message: 'Internal server error' });
+    }
+  }

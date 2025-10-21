@@ -26,3 +26,10 @@ export const createUser = async (userData: Omit<User, 'id' | 'createdAt' | 'upda
 export const getUsers = async (): Promise<User[]> => {
     return prisma.user.findMany();
 };
+
+export const getUserById = async (id: string): Promise<User[]> => {
+    const result = await prisma.user.findMany({
+      where: { id: { in: [id] } },
+    });
+    return result;
+};
