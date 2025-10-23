@@ -12,7 +12,8 @@ Backend do projeto de dicionário visual
 ```
 npm install
 cp .env.example .env 
-prisma migrate dev
+npm install @prisma/client
+npx prisma migrate dev
 npm run dev
 ```
 
