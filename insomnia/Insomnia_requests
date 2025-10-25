@@ -1,83 +1,150 @@
 type: collection.insomnia.rest/5.0
 name: DicionárioVisualApi-Insomnia
 meta:
-  id: wrk_07316282f6da4a98a66fb57aa514a8e8
-  created: 1760194897838
-  modified: 1760196325282
+  id: wrk_c6a2ae6477d84ea4834cf8f25324f911
+  created: 1761175282700
+  modified: 1761175282700
   description: ""
 collection:
-  - url: http://localhost:3000/users
-    name: "Criar usuário "
+  - name: Users
     meta:
-      id: req_0d62cd2e0c8a424f9c86e83036f54e0c
-      created: 1760194897874
-      modified: 1760195183380
-      isPrivate: false
+      id: fld_d705fcfe4a1f4609b96f76358eb0e85e
+      created: 1761175469239
+      modified: 1761177206837
+      sortKey: -1761175469239
       description: ""
-      sortKey: -1760194897874
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "name": "Admin",
-          "email": "admin@example.com",
-          "password": "strongpassword123",
-          "role": "ADMIN"
-        }
-    headers:
-      - name: Content-Type
-        value: application/json
-      - name: User-Agent
-        value: insomnia/11.6.1
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
-  - url: http://localhost:3000/auth/login
-    name: Autenticar usuário
+    children:
+      - url: http://localhost:3000/users
+        name: "Criar usuário "
+        meta:
+          id: req_823d488e34034c1a8bda6810cd9a988f
+          created: 1760194897874
+          modified: 1761177188101
+          isPrivate: false
+          description: ""
+          sortKey: -1761175482862
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Admin2",
+              "email": "admin2@example.com",
+              "password": "strongpassword123",
+              "role": "ADMIN"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/getUsers
+        name: Get Users
+        meta:
+          id: req_f279b81e6cfa4db8865ccb4ec490c2a7
+          created: 1761175492937
+          modified: 1761175562968
+          isPrivate: false
+          description: ""
+          sortKey: -1761175492937
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTE3NTQ1NSwiZXhwIjoxNzYxMTc5MDU1fQ.bdA-hJ7VBV4Mi5weXYsy9Y9211KXojqTGlHeTkAaEcI
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/getUser/{{id}}
+        name: Get User
+        meta:
+          id: req_feb32cfbcf0a42c2a591b2ccb7aaa836
+          created: 1761176470578
+          modified: 1761177660484
+          isPrivate: false
+          description: ""
+          sortKey: -1761175487899.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTE3NTQ1NSwiZXhwIjoxNzYxMTc5MDU1fQ.bdA-hJ7VBV4Mi5weXYsy9Y9211KXojqTGlHeTkAaEcI
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      id: d755fccd-4698-42bb-b9a9-885c232dc956
+      "": ""
+  - name: Auth
     meta:
-      id: req_9013df07a5f74afeab8cb8d698f44cca
-      created: 1760195243026
-      modified: 1760196288597
-      isPrivate: false
+      id: fld_4420389addde43c78d74efef104491ba
+      created: 1761175475257
+      modified: 1761175475257
+      sortKey: -1761175475257
       description: ""
-      sortKey: -1760195243026
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "email": "admin@example.com",
-          "password": "strongpassword123"
-        }
-    headers:
-      - name: Content-Type
-        value: application/json
-      - name: User-Agent
-        value: insomnia/11.6.1
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
+    children:
+      - url: http://localhost:3000/auth/login
+        name: Autenticar usuário
+        meta:
+          id: req_d9e21fef94ab4b3baa0f7723aa5b7c35
+          created: 1760195243026
+          modified: 1761175480580
+          isPrivate: false
+          description: ""
+          sortKey: -1761175480557
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "admin@example.com",
+              "password": "strongpassword123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
-    id: jar_29c3ee87a9756c3af208514bc893c1cfc3d76493
+    id: jar_7de23b2d0104415ba9789868aff4f9f2
     created: 1760194897855
     modified: 1760194897855
 environments:
   name: Base Environment
   meta:
-    id: env_29c3ee87a9756c3af208514bc893c1cfc3d76493
+    id: env_14ca474fa9f24412bd48b3cf618a08a1
     created: 1760194897847
     modified: 1760194897847
     isPrivate: false
