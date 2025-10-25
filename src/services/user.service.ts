@@ -33,3 +33,26 @@ export const getUserById = async (id: string): Promise<User[]> => {
     });
     return result;
 };
+
+export const updateUser = async (id: string, data: Partial<User>): Promise<User> => {
+  if (data.password) {
+    data.password = await bcrypt.hash(data.password, 10);
+  }
+
+  const user = await prisma.user.update({
+    where: { id },
+    data,
+  });
+
+  console.log(`User updated: ${user.email}`);
+  return user;
+};
+
+export const deleteUser = async (id: string): Promise<User> => {
+const user = await prisma.user.delete({
+    where: { id },
+  });
+
+  console.log(`User deleted: ${user.email}`);
+  return user;
+};
