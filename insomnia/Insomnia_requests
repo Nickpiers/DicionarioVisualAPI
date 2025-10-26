@@ -10,7 +10,7 @@ collection:
     meta:
       id: fld_d705fcfe4a1f4609b96f76358eb0e85e
       created: 1761175469239
-      modified: 1761177206837
+      modified: 1761436259078
       sortKey: -1761175469239
       description: ""
     children:
@@ -51,7 +51,7 @@ collection:
         meta:
           id: req_f279b81e6cfa4db8865ccb4ec490c2a7
           created: 1761175492937
-          modified: 1761175562968
+          modified: 1761436429528
           isPrivate: false
           description: ""
           sortKey: -1761175492937
@@ -61,7 +61,7 @@ collection:
             value: insomnia/11.6.2
         authentication:
           type: bearer
-          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTE3NTQ1NSwiZXhwIjoxNzYxMTc5MDU1fQ.bdA-hJ7VBV4Mi5weXYsy9Y9211KXojqTGlHeTkAaEcI
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTQzNjE0NywiZXhwIjoxNzYxNDM5NzQ3fQ.WDfPIxxIarUOsDMTKupVKeXOAIHsfFKjfWBKa-HNyJ0
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -94,8 +94,74 @@ collection:
             send: true
             store: true
           rebuildPath: true
+      - url: http://localhost:3000/users/updateUser/{{id}}
+        name: Update User
+        meta:
+          id: req_ce50703d86c64ff38f4292383130f17a
+          created: 1761436051466
+          modified: 1761436440896
+          isPrivate: false
+          description: ""
+          sortKey: -1761175485380.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "New User Name",
+              "email": "new.email@example.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTQzNjE0NywiZXhwIjoxNzYxNDM5NzQ3fQ.WDfPIxxIarUOsDMTKupVKeXOAIHsfFKjfWBKa-HNyJ0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/deleteUser/{{id}}
+        name: Delete User
+        meta:
+          id: req_a28ef0c7215b4cacbbd7b4187b42eb61
+          created: 1761436462509
+          modified: 1761436473742
+          isPrivate: false
+          description: ""
+          sortKey: -1761175484121.375
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "New User Name",
+              "email": "new.email@example.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTQzNjE0NywiZXhwIjoxNzYxNDM5NzQ3fQ.WDfPIxxIarUOsDMTKupVKeXOAIHsfFKjfWBKa-HNyJ0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
     environment:
-      id: d755fccd-4698-42bb-b9a9-885c232dc956
+      id: 6c3f7a5b-e9d4-4aac-87e7-65038caaeb45
       "": ""
   - name: Auth
     meta:
