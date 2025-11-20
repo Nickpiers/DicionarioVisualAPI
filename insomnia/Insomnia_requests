@@ -6,6 +6,216 @@ meta:
   modified: 1761175282700
   description: ""
 collection:
+  - url: http://localhost:3000/words
+    name: Create verbete
+    meta:
+      id: req_6c1bf03689634627b985a74aa219d2e1
+      created: 1763680465917
+      modified: 1763681962587
+      isPrivate: false
+      description: ""
+      sortKey: -1762427963879.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "term": "API2",
+          "videoUrl": "https://www.youtube.com/watch?v=GZVSYaSaTNM",
+          "meanings": [
+            {
+              "description": "Application Programming Interface. A set of rules that allows one software application to talk to another.",
+              "example": "We used the Twitter API to display tweets on our website."
+            },
+            {
+              "description": "A contract between an information provider and an information user.",
+              "example": "The internal API documentation must be clear for the frontend team."
+            }
+          ]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmNWRlYjk4LTIyMGQtNDI1Mi04M2ZlLWU5ZWZlMjc5NzRiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTM2MSwiZXhwIjoxNzYzNjg0OTYxfQ.1hTTXh0viXC7xVIsm6oiiS8FNbvT2TEqtLvr_l9v-O0
+      disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/words/{{wordId}}
+    name: Update verbete
+    meta:
+      id: req_17b4c8a961414bd99c64f9867d1a7dc3
+      created: 1763681401173
+      modified: 1763682086466
+      isPrivate: false
+      description: ""
+      sortKey: -1761801728408.25
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "term": "REST API",
+          "videoUrl": "https://www.youtube.com/watch?v=lsMQRaeKNDk"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmNWRlYjk4LTIyMGQtNDI1Mi04M2ZlLWU5ZWZlMjc5NzRiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTM2MSwiZXhwIjoxNzYzNjg0OTYxfQ.1hTTXh0viXC7xVIsm6oiiS8FNbvT2TEqtLvr_l9v-O0
+      disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/words/{{wordId}}
+    name: Delete verbete
+    meta:
+      id: req_bc020a36889d4793b3f13014354645bf
+      created: 1763681573869
+      modified: 1763682038835
+      isPrivate: false
+      description: ""
+      sortKey: -1761488610672.625
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "term": "API",
+          "videoUrl": "https://www.youtube.com/watch?v=GZVSYaSaTNM",
+          "meanings": [
+            {
+              "description": "Application Programming Interface. A set of rules that allows one software application to talk to another.",
+              "example": "We used the Twitter API to display tweets on our website."
+            },
+            {
+              "description": "A contract between an information provider and an information user.",
+              "example": "The internal API documentation must be clear for the frontend team."
+            }
+          ]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmNWRlYjk4LTIyMGQtNDI1Mi04M2ZlLWU5ZWZlMjc5NzRiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTM2MSwiZXhwIjoxNzYzNjg0OTYxfQ.1hTTXh0viXC7xVIsm6oiiS8FNbvT2TEqtLvr_l9v-O0
+      disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/words
+    name: Get verbetes
+    meta:
+      id: req_61870a8a97da41edb2d865f3dc8b0dc0
+      created: 1763681914295
+      modified: 1763681927654
+      isPrivate: false
+      description: ""
+      sortKey: -1762114846143.875
+    method: GET
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "term": "API",
+          "videoUrl": "https://www.youtube.com/watch?v=GZVSYaSaTNM",
+          "meanings": [
+            {
+              "description": "Application Programming Interface. A set of rules that allows one software application to talk to another.",
+              "example": "We used the Twitter API to display tweets on our website."
+            },
+            {
+              "description": "A contract between an information provider and an information user.",
+              "example": "The internal API documentation must be clear for the frontend team."
+            }
+          ]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmNWRlYjk4LTIyMGQtNDI1Mi04M2ZlLWU5ZWZlMjc5NzRiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTM2MSwiZXhwIjoxNzYzNjg0OTYxfQ.1hTTXh0viXC7xVIsm6oiiS8FNbvT2TEqtLvr_l9v-O0
+      disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/words/{{wordId}}
+    name: Get verbete
+    meta:
+      id: req_e536f36e5ec249248af169c562f7f389
+      created: 1763681931197
+      modified: 1763681949300
+      isPrivate: false
+      description: ""
+      sortKey: -1761958287276.0625
+    method: GET
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "term": "API",
+          "videoUrl": "https://www.youtube.com/watch?v=GZVSYaSaTNM",
+          "meanings": [
+            {
+              "description": "Application Programming Interface. A set of rules that allows one software application to talk to another.",
+              "example": "We used the Twitter API to display tweets on our website."
+            },
+            {
+              "description": "A contract between an information provider and an information user.",
+              "example": "The internal API documentation must be clear for the frontend team."
+            }
+          ]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmNWRlYjk4LTIyMGQtNDI1Mi04M2ZlLWU5ZWZlMjc5NzRiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTM2MSwiZXhwIjoxNzYzNjg0OTYxfQ.1hTTXh0viXC7xVIsm6oiiS8FNbvT2TEqtLvr_l9v-O0
+      disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
   - name: Users
     meta:
       id: fld_d705fcfe4a1f4609b96f76358eb0e85e
@@ -15,22 +225,22 @@ collection:
       description: ""
     children:
       - url: http://localhost:3000/users
-        name: "Criar usuário "
+        name: Create User
         meta:
           id: req_823d488e34034c1a8bda6810cd9a988f
           created: 1760194897874
-          modified: 1761177188101
+          modified: 1763681173168
           isPrivate: false
           description: ""
-          sortKey: -1761175482862
+          sortKey: -1761175483491.6875
         method: POST
         body:
           mimeType: application/json
           text: |-
             {
-              "name": "Admin2",
-              "email": "admin2@example.com",
-              "password": "strongpassword123",
+              "name": "Admin",
+              "email": "123@gmail.com",
+              "password": "123",
               "role": "ADMIN"
             }
         headers:
@@ -51,7 +261,7 @@ collection:
         meta:
           id: req_f279b81e6cfa4db8865ccb4ec490c2a7
           created: 1761175492937
-          modified: 1761436429528
+          modified: 1763681267895
           isPrivate: false
           description: ""
           sortKey: -1761175492937
@@ -61,7 +271,9 @@ collection:
             value: insomnia/11.6.2
         authentication:
           type: bearer
-          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTQzNjE0NywiZXhwIjoxNzYxNDM5NzQ3fQ.WDfPIxxIarUOsDMTKupVKeXOAIHsfFKjfWBKa-HNyJ0
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmNWRlYjk4LTIyMGQtNDI1Mi04M2ZlLWU5ZWZlMjc5NzRiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTIxMiwiZXhwIjoxNzYzNjgxMjIyfQ.5hMW3aNlFSUdxwUKKPL7DR3meAJ_xJcuQsSd3pxYVDQ
+          disabled: false
+          prefix: ""
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -75,7 +287,7 @@ collection:
         meta:
           id: req_feb32cfbcf0a42c2a591b2ccb7aaa836
           created: 1761176470578
-          modified: 1761177660484
+          modified: 1763681247267
           isPrivate: false
           description: ""
           sortKey: -1761175487899.5
@@ -85,7 +297,7 @@ collection:
             value: insomnia/11.6.2
         authentication:
           type: bearer
-          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTE3NTQ1NSwiZXhwIjoxNzYxMTc5MDU1fQ.bdA-hJ7VBV4Mi5weXYsy9Y9211KXojqTGlHeTkAaEcI
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmNWRlYjk4LTIyMGQtNDI1Mi04M2ZlLWU5ZWZlMjc5NzRiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTIxMiwiZXhwIjoxNzYzNjgxMjIyfQ.5hMW3aNlFSUdxwUKKPL7DR3meAJ_xJcuQsSd3pxYVDQ
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -99,7 +311,7 @@ collection:
         meta:
           id: req_ce50703d86c64ff38f4292383130f17a
           created: 1761436051466
-          modified: 1761436440896
+          modified: 1763681114051
           isPrivate: false
           description: ""
           sortKey: -1761175485380.75
@@ -118,7 +330,7 @@ collection:
             value: insomnia/11.6.2
         authentication:
           type: bearer
-          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTQzNjE0NywiZXhwIjoxNzYxNDM5NzQ3fQ.WDfPIxxIarUOsDMTKupVKeXOAIHsfFKjfWBKa-HNyJ0
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxMmFkOTlmLTg4NWYtNDNlOC04NzY4LTYxZTBmNTNmYzRkNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTA1MSwiZXhwIjoxNzYzNjgxMDYxfQ.W-HVymdPgAUDT58G3dZ8xOpabakvDq2c4iIa9I90_B4
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -132,7 +344,7 @@ collection:
         meta:
           id: req_a28ef0c7215b4cacbbd7b4187b42eb61
           created: 1761436462509
-          modified: 1761436473742
+          modified: 1763681370919
           isPrivate: false
           description: ""
           sortKey: -1761175484121.375
@@ -151,7 +363,7 @@ collection:
             value: insomnia/11.6.2
         authentication:
           type: bearer
-          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjM2Y3YTViLWU5ZDQtNGFhYy04N2U3LTY1MDM4Y2FhZWI0NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MTQzNjE0NywiZXhwIjoxNzYxNDM5NzQ3fQ.WDfPIxxIarUOsDMTKupVKeXOAIHsfFKjfWBKa-HNyJ0
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmNWRlYjk4LTIyMGQtNDI1Mi04M2ZlLWU5ZWZlMjc5NzRiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzY4MTM2MSwiZXhwIjoxNzYzNjg0OTYxfQ.1hTTXh0viXC7xVIsm6oiiS8FNbvT2TEqtLvr_l9v-O0
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -176,7 +388,7 @@ collection:
         meta:
           id: req_d9e21fef94ab4b3baa0f7723aa5b7c35
           created: 1760195243026
-          modified: 1761175480580
+          modified: 1763681209949
           isPrivate: false
           description: ""
           sortKey: -1761175480557
@@ -185,8 +397,8 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "email": "admin@example.com",
-              "password": "strongpassword123"
+              "email": "123@gmail.com",
+              "password": "123"
             }
         headers:
           - name: Content-Type
@@ -201,6 +413,16 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Verbetes
+    meta:
+      id: fld_1b2e2773c6294c42b9d19cfc3e7b9ebe
+      created: 1763680452502
+      modified: 1763681747130
+      sortKey: -1763680452502
+      description: ""
+    environment:
+      wordId: a503884b-938a-45fa-bc72-36b9b5a04117
+      "": ""
 cookieJar:
   name: Default Jar
   meta:
@@ -212,5 +434,7 @@ environments:
   meta:
     id: env_14ca474fa9f24412bd48b3cf618a08a1
     created: 1760194897847
-    modified: 1760194897847
+    modified: 1763682093349
     isPrivate: false
+  data:
+    wordId: d310fb0e-c28f-4a25-9503-1e659eb18318
