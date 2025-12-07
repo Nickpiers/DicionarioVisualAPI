@@ -9,10 +9,7 @@ const app = express();
 // --- CORS CONFIG ---
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://stunning-tulumba-25517c.netlify.app",
-    ],
+    origin: ["http://localhost:5173", "https://dicionariovisual.netlify.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
