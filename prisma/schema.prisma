@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+enum Role {
+  ADMIN
+  COLLABORATOR
+}
+
+
+model User {
+  id    String @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String 
+  role      Role     @default(COLLABORATOR)
+
+  words     Word[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Verbete
+model Word {
+  id        String    @id @default(uuid())
+  term      String    @unique 
+  videoUrl  String    
+  meanings  Meaning[]
+  
+  createdById String
+  createdBy   User      @relation(fields: [createdById], references: [id])
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+// Significados
+model Meaning {
+  id          String @id @default(uuid())
+  description String // Description of the meaning
+  example     String // Usage example
+  
+  // Foreign Key to Word
+  wordId      String
+  word        Word   @relation(fields: [wordId], references: [id], onDelete: Cascade)
+}
