@@ -28,3 +28,9 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+app.get("/test-env", (req, res) => {
+  res.json({
+    JWT_SECRET: process.env.JWT_SECRET ? "LOADED" : "MISSING",
+  });
+});
